@@ -1,5 +1,5 @@
-@font-face { font-family: "hafs"; src: url(font/hafs_v20.ttf) format("truetype"); }
-@font-face { font-family: "font1"; src: url(font/font.ttf) format("truetype"); }
+@font-face { font-family: "hafs"; src: url(hafs_v20.ttf) format("truetype"); }
+@font-face { font-family: "font1"; src: url(font.ttf) format("truetype"); }
 
 /* التصميم العام */
 body {
