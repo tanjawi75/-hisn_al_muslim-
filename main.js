@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+        document.getElementById("loading-screen").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
+    }, 3000); // بعد 5 ثوانٍ
+});
 document.addEventListener(
   'DOMContentLoaded',
   function() {
