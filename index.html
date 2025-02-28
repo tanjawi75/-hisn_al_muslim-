@@ -5,30 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>حصن المسلم</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>حصن المسلم</h1>
-        <input type="text" id="Search" placeholder="ابحث عن ذكر أو دعاء...">
-    </header>
 
-    <main>
-        <!-- جدول عرض الفئات -->
-        <table id="table">
-            <tbody id="table_tbody"></tbody>
-        </table>
-
-        <!-- قسم عرض محتوى الفئة -->
-        <div id="category_content">
-            <h2 id="title_index"></h2>
-            <!-- سيتم إضافة المحتوى هنا ديناميكيًا -->
+    <!-- شاشة البداية -->
+    <div id="loading-screen">
+        <div class="container">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
         </div>
+    </div>
 
-        <!-- تنبيه النسخ -->
-        <div id="alrt" style="display: none;">تم النسخ!</div>
-    </main>
+    <!-- المحتوى الرئيسي -->
+    <div id="main-content">
+        <header>
+            <h1>حصن المسلم</h1>
+            <input type="text" id="Search" placeholder="ابحث عن ذكر أو دعاء...">
+        </header>
+
+        <main>
+            <table id="table">
+                <tbody id="table_tbody"></tbody>
+            </table>
+
+            <div id="category_content">
+                <h2 id="title_index"></h2>
+            </div>
+
+            <div id="alrt" style="display: none;">تم النسخ!</div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <h3>اتصل بنا</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" class="social-icon" id="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" class="social-icon" id="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/0783367157" class="social-icon" id="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://t.me/" class="social-icon" id="telegram"><i class="fab fa-telegram"></i></a>
+                </div>
+                <p>جميع الحقوق محفوظة &copy; 2023 - حصن المسلم</p>
+            </div>
+        </footer>
+    </div>
 
     <script src="main.js"></script>
 </body>
-</html>
+    </html>
