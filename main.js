@@ -207,12 +207,12 @@ function toggleInfo() {
   });
 }
 // دالة إنقاص العدد عند النقر
-function decreaseCount(element, originalCount) {
+function decreaseCount(element) {
   let countSpan = element.querySelector(".category_bottom_number");
   let count = parseInt(countSpan.textContent);
   
   if (count === 1) {
-    showCompletionMessage(element, originalCount); // عرض الرسالة قبل أن يصبح العدد 0
+    showCompletionMessage(); // عرض الرسالة قبل أن يصبح العدد 0
   }
   
   if (count > 0) {
@@ -221,32 +221,13 @@ function decreaseCount(element, originalCount) {
   }
 }
 
-// دالة عرض رسالة "تم إكمال الذكر" وإضافة زر إعادة التكرار
-function showCompletionMessage(element, originalCount) {
-  const alrt = document.getElementById('alrt'); // العنصر المستخدم في النسخ
+// دالة عرض رسالة "تم إكمال الذكر"
+function showCompletionMessage() {
+  const alrt = document.getElementById('alrt'); // نفس العنصر المستخدم في النسخ
   alrt.innerText = "تم إكمال الذكر"; // تغيير النص
   alrt.style.display = 'block'; // إظهار الرسالة
   
-  // إنشاء زر إعادة التكرار
-  let resetButton = document.createElement("button");
-  resetButton.innerText = "إعادة التكرار";
-  resetButton.classList.add("reset-btn");
-  resetButton.onclick = function() {
-    resetCount(element, originalCount); // استعادة العدد الأصلي
-    alrt.style.display = 'none'; // إخفاء الرسالة عند إعادة التكرار
-    resetButton.remove(); // إزالة الزر بعد إعادة التكرار
-  };
-  
-  alrt.appendChild(resetButton); // إضافة الزر إلى الرسالة
-  
   setTimeout(() => {
-    alrt.style.display = 'none'; // إخفاء الرسالة بعد 3 ثوانٍ
-    resetButton.remove(); // إزالة الزر بعد اختفاء الرسالة
-  }, 3000);
-}
-
-// دالة إعادة التكرار
-function resetCount(element, originalCount) {
-  let countSpan = element.querySelector(".category_bottom_number");
-  countSpan.textContent = originalCount; // إعادة العدد للقيمة الأصلية
+    alrt.style.display = 'none'; // إخفاء الرسالة بعد ثانية
+  }, 1000);
 }
