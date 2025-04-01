@@ -2,7 +2,7 @@ document.addEventListener(
   'DOMContentLoaded',
   function() {
     fetch(
-        './json/hisnmuslim.json') // استدعاء ملف JSON
+        'hisnmuslim.json') // استدعاء ملف JSON
       .then(response => response
         .json())
       .then(data => {
