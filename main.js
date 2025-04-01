@@ -1,16 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(function () {
-        document.getElementById("loading-screen").style.display = "none";
-        document.getElementById("main-content").style.display = "block";
-    }, 3000); // بعد 5 ثوانٍ
-});
 document.addEventListener(
   'DOMContentLoaded',
   function() {
     fetch(
-      'hisnmuslim.json') // استدعاء ملف JSON
+        'hisnmuslim.json') // استدعاء ملف JSON
       .then(response => response
-      .json())
+        .json())
       .then(data => {
         const tableTbody = document
           .getElementById(
@@ -25,12 +19,12 @@ document.addEventListener(
           .getElementById('alrt');
         const Search = document
           .getElementById('Search');
-
+        
         // عرض الفئات في الجدول
         data.forEach(item => {
           const tr = document
             .createElement(
-            'tr');
+              'tr');
           tr.innerHTML = `
                     <td class="number_index">${item.id}</td>
                     <td><p class="category" id="category_id_${item.id}">${item.category}</p></td>
@@ -39,7 +33,7 @@ document.addEventListener(
           tableTbody
             .appendChild(tr);
         });
-
+        
         // تشغيل الصوت
         document.querySelectorAll(
           '.audio').forEach(
@@ -50,36 +44,36 @@ document.addEventListener(
               new Audio(data[id -
                 1].audio);
             button.onclick =
-          () => {
-              if (sound
-                .paused) {
-                sound.play();
-                button
-                  .innerText =
-                  'إيقاف';
-              } else {
-                sound.pause();
-                sound
-                  .currentTime =
-                  0;
-                button
-                  .innerText =
-                  'تشغيل';
-              }
-            };
+              () => {
+                if (sound
+                  .paused) {
+                  sound.play();
+                  button
+                    .innerText =
+                    'إيقاف';
+                } else {
+                  sound.pause();
+                  sound
+                    .currentTime =
+                    0;
+                  button
+                    .innerText =
+                    'تشغيل';
+                }
+              };
           });
-
+        
         // عرض محتوى الفئة
         document.querySelectorAll(
           '.category').forEach(
           category => {
             category.onclick =
-            () => {
+              () => {
                 const id =
                   category.id
                   .split(
                     'category_id_'
-                    )[1];
+                  )[1];
                 const
                   categoryData =
                   data[id - 1];
@@ -115,18 +109,18 @@ document.addEventListener(
                 categoryContent
                   .style.display =
                   'block';
-
+                
                 // زر الرجوع
                 document
                   .getElementById(
                     'back')
                   .onclick =
-                () => {
+                  () => {
                     window
                       .location
                       .reload();
                   };
-
+                
                 // نسخ النص
                 document
                   .querySelectorAll(
@@ -143,13 +137,13 @@ document.addEventListener(
                             .parentElement
                             .querySelector(
                               '.category_text'
-                              )
+                            )
                             .innerText;
                           navigator
                             .clipboard
                             .writeText(
                               text
-                              );
+                            );
                           alrt
                             .style
                             .display =
@@ -161,12 +155,12 @@ document.addEventListener(
                               .display =
                               'none',
                               1000
-                              );
+                            );
                         };
                     });
               };
           });
-
+        
         // البحث
         Search.onkeyup = () => {
           const filter = Search
@@ -196,3 +190,17 @@ document.addEventListener(
         'حدث خطأ أثناء تحميل البيانات:',
         error));
   });
+
+function toggleInfo() {
+  const info = document.getElementById('info');
+  if (info.style.display === 'none' || info.style.display === '') {
+    info.style.display = 'block'; // عرض العنصر
+  } else {
+    info.style.display = 'none'; // إخفاء العنصر
+  }
+  // دالة إخفاء info عند الضغط على زر الإخفاء
+  document.getElementById('hideButton').addEventListener('click', function() {
+    const info = document.getElementById('info');
+    info.style.display = 'none'; // إخفاء العنصر
+  });
+}
