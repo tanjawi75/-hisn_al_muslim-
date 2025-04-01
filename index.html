@@ -1,62 +1,70 @@
 <!DOCTYPE html>
 <html lang="ar">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="msvalidate.01" content="5C02DD5DB3288B2EC37329417878FEF8" />
-     <meta name="google-site-verification" content="Pu_OXs5o2vR-0a2XX0pVq4B1mm_Ye7rTPCOSy0TjmiE" />
-    <meta name="description" content="موقع حصن المسلم - الأذكار الكاملة مكتوبة ومسموعة. تصفح أذكار الصباح والمساء، أذكار النوم، أذكار الصلاة، وأكثر من 100 ذكر من أحاديث النبي صلى الله عليه وسلم. استمع إلى الأذكار بصوت جميل أو اقرأها مكتوبة بخط واضح. موقع شامل ومتكامل لحصن المسلم والأذكار اليومية.">
-<meta name="keywords" content="حصن المسلم, أذكار, الأذكار الكاملة, أذكار مكتوبة, أذكار مسموعة, أذكار الصباح, أذكار المساء, أذكار النوم, أذكار الصلاة, أذكار اليومية, أذكار النبي, أحاديث الأذكار, أذكار صوتية, أذكار بصوت, أذكار اسلامية, أذكار يومية, أذكار قصيرة, أذكار طويلة, أذكار القرآن, أذكار السنه, حصن المسلم مكتوب, حصن المسلم صوت, حصن المسلم كامل, أذكار الصباح والمساء, أذكار بعد الصلاة, أذكار الاستيقاظ, أذكار النوم من السنة, أذكار الصباح من السنة, أذكار المساء من السنة, أذكار الحفظ, أذكار الرقية, أذكار السفر, أذكار العمل, أذكار المذاكرة, أذكار الرزق, أذكار التوبة, أذكار الاستغفار">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حصن 1hamza المسلم</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#86603A" />
+  <meta name="msvalidate.01" content="5C02DD5DB3288B2EC37329417878FEF8" />
+  <meta name="google-site-verification" content="Pu_OXs5o2vR-0a2XX0pVq4B1mm_Ye7rTPCOSy0TjmiE" />
+  <meta name="description" content="موقع حصن المسلم - الأذكار الكاملة مكتوبة ومسموعة. تصفح أذكار الصباح والمساء، أذكار النوم، أذكار الصلاة، وأكثر من 100 ذكر من أحاديث النبي صلى الله عليه وسلم. استمع إلى الأذكار بصوت جميل أو اقرأها مكتوبة بخط واضح. موقع شامل ومتكامل لحصن المسلم والأذكار اليومية.">
+  <meta name="keywords" content="حصن المسلم, أذكار, الأذكار الكاملة, أذكار مكتوبة, أذكار مسموعة, أذكار الصباح, أذكار المساء, أذكار النوم, أذكار الصلاة, أذكار اليومية, أذكار النبي, أحاديث الأذكار, أذكار صوتية, أذكار بصوت, أذكار اسلامية, أذكار يومية, أذكار قصيرة, أذكار طويلة, أذكار القرآن, أذكار السنه, حصن المسلم مكتوب, حصن المسلم صوت, حصن المسلم كامل, أذكار الصباح والمساء, أذكار بعد الصلاة, أذكار الاستيقاظ, أذكار النوم من السنة, أذكار الصباح من السنة, أذكار المساء من السنة, أذكار الحفظ, أذكار الرقية, أذكار السفر, أذكار العمل, أذكار المذاكرة, أذكار الرزق, أذكار التوبة, أذكار الاستغفار">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>حصن المسلم</title>
 </head>
+
 <body>
-
-    <!-- شاشة البداية -->
-    <div id="loading-screen">
-        <div class="container">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-        </div>
-    </div>
-
-    <!-- المحتوى الرئيسي -->
-    <div id="main-content">
-        <header>
-            <h1>حصن المسلم</h1>
-            <input type="text" id="Search" placeholder="ابحث عن ذكر أو دعاء...">
-        </header>
-
-        <main>
-            <table id="table">
-                <tbody id="table_tbody"></tbody>
-            </table>
-
-            <div id="category_content">
-                <h2 id="title_index"></h2>
-            </div>
-
-            <div id="alrt" style="display: none;">تم النسخ!</div>
-        </main>
-
-        <footer>
-            <div class="footer-content">
-                <h3>اتصل بنا</h3>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/" class="social-icon" id="facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/" class="social-icon" id="instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/0783367157" class="social-icon" id="whatsapp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://t.me/" class="social-icon" id="telegram"><i class="fab fa-telegram"></i></a>
-                </div>
-                <p>جميع الحقوق محفوظة &copy; 2023 - حصن المسلم</p>
-            </div>
-        </footer>
-    </div>
-
-    <script src="main.js"></script>
+  
+  
+  <!-- المحتوى الرئيسي -->
+  <div id="main-content">
+    <header>
+      <div class="content_profile" onclick="toggleInfo()"></div>
+      <p id="info">
+        التعريف بالكتاب:
+        "حصن المسلم" هو كتاب يحتوي على مجموعة من الأذكار والأدعية المستوحاة من الأحاديث النبوية الشريفة. الكتاب يُعتبر مصدرًا هامًا للمسلم يهدف إلى التقرب إلى الله تعالى وحماية النفس من الشرور، كما يعين المسلم على تذكُّر الله في أوقات مختلفة من اليوم.
+        
+        <br />
+        <br />
+        التعريف بالكاتب:
+        الشيخ سعيد بن علي بن وهف القحطاني هو مؤلف الكتاب، وهو عالم سعودي معروف بتخصصه في العلوم الشرعية، ويُعتبر من العلماء البارزين في مجال التفسير والعقيدة والحديث. قام بتأليف "حصن المسلم" بهدف تسهيل وصول الأذكار النبوية الصحيحة إلى المسلمين بشكل مرتب ومبسط
+        <br />
+        <button id="hideButton">اخفاء</button>
+        
+      </p>
+      <h1>حصن المسلم</h1>
+      
+      <input type="text" id="Search" placeholder="ابحث ">
+    </header>
+    
+    <main>
+      <table id="table">
+        <tbody id="table_tbody"></tbody>
+      </table>
+      
+      <div id="category_content">
+        <h2 id="title_index"></h2>
+      </div>
+      
+      <div id="alrt" style="display: none;">تم النسخ!</div>
+    </main>
+    
+    <footer>
+      <h4>تابعنا على مواقع التواصل الاجتماعي </h4>
+      
+      <div class="footer-col">
+        <ul class="social-menu">
+          <li><a href="https://www.facebook.com/profile.php?id=100085429006683&mibextid=rS40aB7S9Ucbxw6v" class="facebook" target="_blank"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/hamza.aiaou.louahabi?igsh=YnM4ZGw3YnNzMWVq" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://wa.me/0783367157" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+          
+          <li><a href="https://t.me/Hamza_aiaou_loiahabi" class="telegram" target="_blank"><i class="fab fa-telegram"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
 </body>
-    </html>
+
+</html>
