@@ -223,11 +223,11 @@ function decreaseCount(element) {
 
 // دالة عرض رسالة "تم إكمال الذكر"
 function showCompletionMessage() {
-  const alrt = document.getElementById('alrt'); // نفس العنصر المستخدم في النسخ
-  alrt.innerText = "تم إكمال الذكر"; // تغيير النص
-  alrt.style.display = 'block'; // إظهار الرسالة
+  const alrt1 = document.getElementById('alrt1'); // نفس العنصر المستخدم في النسخ
+  alrt1.innerText = "تم إكمال الذكر"; // تغيير النص
+  alrt1.style.display = 'block'; // إظهار الرسالة
   
   setTimeout(() => {
-    alrt.style.display = 'none'; // إخفاء الرسالة بعد ثانية
+    alrt1.style.display = 'none'; // إخفاء الرسالة بعد ثانية
   }, 1000);
 }
