@@ -197,7 +197,7 @@ transform: translateY(0);
 }
 
 .category_text {
-font-family: "font";
+font-family: "hafs";
 font-size: 20px;
 line-height: 1.8;
 color: #5D432C;
@@ -205,9 +205,15 @@ text-align: center;
 }
 
 .category_audio {
-width: 100%;
-margin: 15px 0;
-border-radius: 8px;
+    width: 100%;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.category_audio::-webkit-media-controls-panel {
+    background-color: #E2C49E;
+    border-radius: 10px;
 }
 
 .category_bottom {
